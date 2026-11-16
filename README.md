@@ -1,39 +1,22 @@
-# Android Sample Project: MVP with RxJava and Retrofit
+# MVP with RxJava and Retrofit (Android)
 
-## Overview
+Android sample of the Model-View-Presenter pattern with RxJava 2 and Retrofit.
 
-This repository contains a simple Android application demonstrating the MVP (Model-View-Presenter) architecture pattern integrated with RxJava for asynchronous programming and Retrofit for network requests.
+This is an older sample kept for reference. It is not actively maintained.
 
-The application fetches data from a remote API using Retrofit and displays it. RxJava is used to handle asynchronous operations and manage data streams, showcasing how to structure an Android project for scalability and testability.
+## What it shows
 
-## Features
+- `BasePresenter` and `BaseView`, and a splash screen built as `SplashFragment`, `SplashPresenter` and `SplashView`
+- A `NetworkModule` and `PostApi` for `GET /posts` on [JSONPlaceholder](https://jsonplaceholder.typicode.com)
 
-- Fetches data from a remote API endpoint using Retrofit.
-- Handles asynchronous operations and data streams with RxJava.
-- Implements the MVP architecture pattern for clear separation of concerns.
+## Stack
 
-## Libraries Used
+Java, RxJava 2.1.9, RxAndroid 2.0.2, Retrofit 2.3.0 with the Moshi converter, `minSdkVersion 15`, `compileSdkVersion 27`.
 
-- **Retrofit**: For API communication.
-- **RxJava**: For asynchronous and reactive programming.
-- **Moshi**: For JSON parsing. 
+## Run
 
-## Installation
-
-1. Clone the repository: https://github.com/sandeepsingh91/MVP-With-RXJava-Retrofit.git
-2. Open the project in Android Studio.
-
-3. Build and run the project on an Android device or emulator.
-
-## Usage
-
-- Upon launching the app, data will be fetched asynchronously from the remote API using Retrofit and RxJava.
-- Data will be displayed in a list using RecyclerView with custom adapters.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Open the project in Android Studio and run the `app` module. It uses an older Android Gradle plugin (3.1.x) and `compileSdkVersion 27`, so Android Studio may ask you to update the Gradle wrapper and plugin.
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+MIT. See [LICENSE](LICENSE).
